@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GameScene">
+   <children>
+      <Button fx:id="ButtonRock" layoutX="277.0" layoutY="117.0" mnemonicParsing="false" onAction="#rock" text="Rock">
+         <font>
+            <Font name="MesloLGS NF Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonPaper" layoutX="273.0" layoutY="187.0" mnemonicParsing="false" onAction="#paper" text="Paper">
+         <font>
+            <Font name="MesloLGS NF Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonScissor" layoutX="265.0" layoutY="268.0" mnemonicParsing="false" onAction="#scissor" text="Scissor">
+         <font>
+            <Font name="MesloLGS NF Bold" size="13.0" />
+         </font>
+      </Button>
+      <Text fx:id="computerScore" layoutX="87.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Text>
+      <Text fx:id="playerScore" layoutX="430.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
+         <font>
+            <Font size="72.0" />
+         </font>
+      </Text>
+      <Text layoutX="86.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Computer Score" />
+      <Text layoutX="439.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player Score" />
+   </children>
+</AnchorPane>
