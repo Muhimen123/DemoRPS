@@ -16,29 +16,44 @@ public class GameScene {
     public Button ButtonScissor;
     public Text computerScore;
     public Text playerScore;
+    public Text totalGamesPlayed;
     public int playerScoreValue;
     public int computerScoreValue;
+    public int totalGamesPlayedValue;
 
     public GameScene() {
         computerScoreValue = 0;
         playerScoreValue = 0;
+        totalGamesPlayedValue =0;
     }
 
     public void rock(ActionEvent actionEvent) {
         System.out.println("rock");
         int winner = GameLogic.getWinner(0);
+        totalGamesPlayedValue++;
+        String st = "";
+        if(totalGamesPlayedValue <= 9) st = "0";
+        totalGamesPlayed.setText(st + totalGamesPlayedValue);
         updateScore(winner);
     }
 
     public void paper(ActionEvent actionEvent) {
         System.out.println("paper");
         int winner = GameLogic.getWinner(0);
+        totalGamesPlayedValue++;
+        String st = "";
+        if(totalGamesPlayedValue <= 9) st = "0";
+        totalGamesPlayed.setText(st + totalGamesPlayedValue);
         updateScore(winner);
     }
 
     public void scissor(ActionEvent actionEvent) {
         System.out.println("scissor");
         int winner = GameLogic.getWinner(0);
+        totalGamesPlayedValue++;
+        String st = "";
+        if(totalGamesPlayedValue <= 9) st = "0";
+        totalGamesPlayed.setText(st + totalGamesPlayedValue);
         updateScore(winner);
     }
 
