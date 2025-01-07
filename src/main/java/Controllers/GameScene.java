@@ -16,12 +16,15 @@ public class GameScene {
     public Button ButtonScissor;
     public Text computerScore;
     public Text playerScore;
+    public Text totalGamesPlayed;
     public int playerScoreValue;
     public int computerScoreValue;
+    public int totalGamesPlayedValue;
 
     public GameScene() {
         computerScoreValue = 0;
         playerScoreValue = 0;
+        totalGamesPlayedValue =0;
     }
 
     public void rock(ActionEvent actionEvent) {
@@ -51,7 +54,6 @@ public class GameScene {
         } else if(winner == 1) {
             alert.setContentText("Player wins!");
             playerScoreValue++;
-
             String st = "";
             if(playerScoreValue <= 9) st = "0";
 
@@ -59,12 +61,14 @@ public class GameScene {
         } else {
             alert.setContentText("Computer wins!");
             computerScoreValue++;
-
             String st = "";
             if(computerScoreValue <= 9) st = "0";
             computerScore.setText(st + computerScoreValue);
         }
-
+        totalGamesPlayedValue++;
+        String st = "";
+        if(totalGamesPlayedValue <= 9) st = "0";
+        totalGamesPlayed.setText(st + totalGamesPlayedValue);
         alert.showAndWait();
     }
 }
