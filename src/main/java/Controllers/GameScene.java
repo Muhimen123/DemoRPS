@@ -30,30 +30,18 @@ public class GameScene {
     public void rock(ActionEvent actionEvent) {
         System.out.println("rock");
         int winner = GameLogic.getWinner(0);
-        totalGamesPlayedValue++;
-        String st = "";
-        if(totalGamesPlayedValue <= 9) st = "0";
-        totalGamesPlayed.setText(st + totalGamesPlayedValue);
         updateScore(winner);
     }
 
     public void paper(ActionEvent actionEvent) {
         System.out.println("paper");
         int winner = GameLogic.getWinner(0);
-        totalGamesPlayedValue++;
-        String st = "";
-        if(totalGamesPlayedValue <= 9) st = "0";
-        totalGamesPlayed.setText(st + totalGamesPlayedValue);
         updateScore(winner);
     }
 
     public void scissor(ActionEvent actionEvent) {
         System.out.println("scissor");
         int winner = GameLogic.getWinner(0);
-        totalGamesPlayedValue++;
-        String st = "";
-        if(totalGamesPlayedValue <= 9) st = "0";
-        totalGamesPlayed.setText(st + totalGamesPlayedValue);
         updateScore(winner);
     }
 
@@ -66,7 +54,6 @@ public class GameScene {
         } else if(winner == 1) {
             alert.setContentText("Player wins!");
             playerScoreValue++;
-
             String st = "";
             if(playerScoreValue <= 9) st = "0";
 
@@ -74,12 +61,14 @@ public class GameScene {
         } else {
             alert.setContentText("Computer wins!");
             computerScoreValue++;
-
             String st = "";
             if(computerScoreValue <= 9) st = "0";
             computerScore.setText(st + computerScoreValue);
         }
-
+        totalGamesPlayedValue++;
+        String st = "";
+        if(totalGamesPlayedValue <= 9) st = "0";
+        totalGamesPlayed.setText(st + totalGamesPlayedValue);
         alert.showAndWait();
     }
 }
